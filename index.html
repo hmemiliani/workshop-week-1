@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al Sistema de Reservas</h1>
+        <div id="login-form">
+            <h2>Iniciar sesión</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button onclick="iniciarSesion()">Iniciar Sesión</button>
+            <button onclick="mostrarRegistro()">Registrarse</button>
+        </div>
+        <div id="registro-form" style="display: none;">
+            <h2>Registrarse</h2>
+            <input type="text" id="registro-nombre" placeholder="Nombre completo">
+            <input type="email" id="registro-email" placeholder="Email">
+            <input type="password" id="registro-password" placeholder="Contraseña">
+            <select id="registro-rol" onchange="mostrarCampoClave()">
+                <option value="regular">Usuario Regular</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <input type="password" id="registro-clave" placeholder="Clave de Administrador" style="display: none;">
+            <button onclick="registrarUsuario()">Registrarse</button>
+            <button onclick="ocultarRegistro()">Regresar al Login</button>
+            
+        </div>
+    </div>
+    <script src="Usuario.js"></script>
+    <script src="Reserva.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
